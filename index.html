@@ -57,17 +57,21 @@
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
             let y = 10;
+            let maxWidth = 180; // Largeur max pour éviter les coupures
+            doc.setFontSize(12);
             doc.text("Formulaire d'Enquête DGS - Flore Thalouarn", 10, y);
             y += 10;
             
             document.querySelectorAll("label, textarea").forEach(element => {
                 if (element.tagName === "LABEL") {
-                    doc.text(element.innerText, 10, y);
-                    y += 7;
+                    let lines = doc.splitTextToSize(element.innerText, maxWidth);
+                    doc.text(lines, 10, y);
+                    y += lines.length * 7;
                 } else if (element.tagName === "TEXTAREA") {
                     let response = element.value.trim() || "(Pas de réponse)";
-                    doc.text(response, 10, y);
-                    y += 10;
+                    let responseLines = doc.splitTextToSize(response, maxWidth);
+                    doc.text(responseLines, 10, y);
+                    y += responseLines.length * 7;
                 }
                 if (y > 270) { doc.addPage(); y = 10; }
             });

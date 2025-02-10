@@ -65,7 +65,8 @@
                     doc.text(element.innerText, 10, y);
                     y += 7;
                 } else if (element.tagName === "TEXTAREA") {
-                    doc.text(element.value || "(Pas de réponse)", 10, y);
+                    let response = element.value.trim() || "(Pas de réponse)";
+                    doc.text(response, 10, y);
                     y += 10;
                 }
                 if (y > 270) { doc.addPage(); y = 10; }

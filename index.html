@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'Enquête DGS - Flore Thalouarn</title>
+    <title>Formulaire d'enquête destiné à Flore Thalouarn, directrice générale des services de la ville de Saint Brieuc</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <h1>Formulaire d'Enquête destiné à Flore Thalouarn</h1>
+    <h1>Formulaire d'enquête destiné à Flore Thalouarn, directrice générale des services de la ville de Saint Brieuc</h1>
     <form id="questionnaire">
         <h2>Section 1 : Questions de Hari</h2>
         <label><strong>Hari :</strong> Le droit administratif joue un rôle clé dans votre métier. Quelle importance a-t-il dans la gestion d’une collectivité ?</label>
@@ -59,7 +59,7 @@
             let y = 10;
             let maxWidth = 180;
             doc.setFontSize(10);
-            doc.text("Formulaire d'Enquête DGS - Flore Thalouarn", 10, y);
+            doc.text("Formulaire d'enquête destiné à Flore Thalouarn, directrice générale des services de la ville de Saint Brieuc", 10, y);
             y += 10;
             
             document.querySelectorAll("label, textarea").forEach(element => {

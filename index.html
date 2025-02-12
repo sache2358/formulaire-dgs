@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'enquête destiné à Flore Thalouarn, directrice générale des services de la ville de Saint Brieuc</title>
+    <title>Questionnaire destiné à Thibault Le Hingrat, maire adjoint de Saint-Brieuc</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
@@ -15,38 +15,38 @@
     </style>
 </head>
 <body>
-    <h1>Formulaire d'enquête destiné à Flore Thalouarn, directrice générale des services de la ville de Saint Brieuc</h1>
+    <h1>Questionnaire destiné à Thibault Le Hingrat, maire adjoint de Saint-Brieuc</h1>
     <form id="questionnaire">
         <h2>Questions de Hari</h2>
-        <label>Le droit administratif joue un rôle clé dans votre métier. Quelle importance a-t-il dans la gestion d’une collectivité ?</label>
+        <label>Le rôle d'un maire adjoint est essentiel dans la gestion d'une ville. Comment décririez-vous votre fonction et votre impact sur la collectivité ?</label>
         <textarea name="q1"></textarea>
-        <label>Quelles sont vos missions principales en tant que Directrice Générale des Services ?</label>
+        <label>Quelles sont vos principales missions en tant que maire adjoint ?</label>
         <textarea name="q2"></textarea>
-        <label>Quel a été votre parcours avant d’occuper ce poste ? Quelles étapes ont été clés pour votre évolution ?</label>
+        <label>Quel a été votre parcours avant d'occuper ce poste ? Quelles étapes ont été clés dans votre engagement politique ?</label>
         <textarea name="q3"></textarea>
 
         <h2>Questions de Talla</h2>
-        <label>Votre métier repose-t-il davantage sur des connaissances théoriques acquises à l’université ou sur l’expérience du terrain ?</label>
+        <label>Pensez-vous que votre métier repose davantage sur l'expérience du terrain ou sur des connaissances théoriques acquises à l'université ?</label>
         <textarea name="q4"></textarea>
-        <label>Pensez-vous qu’il y aura une transformation majeure dans la gestion des collectivités avec les nouvelles technologies et les contraintes budgétaires croissantes ?</label>
+        <label>Avec les défis actuels comme la transition écologique et la transformation numérique, comment la fonction de maire adjoint évolue-t-elle ?</label>
         <textarea name="q5"></textarea>
-        <label>Quels conseils donneriez-vous à un étudiant en AES qui souhaiterait évoluer dans la fonction publique territoriale ?</label>
+        <label>Quels conseils donneriez-vous à un étudiant en AES qui souhaiterait s’engager dans la politique locale ?</label>
         <textarea name="q6"></textarea>
 
         <h2>Questions d’Amélie</h2>
-        <label>Comment imaginez-vous l'évolution du métier de DGS dans les années à venir ?</label>
+        <label>Comment imaginez-vous l’évolution du rôle de maire adjoint dans les années à venir ?</label>
         <textarea name="q7"></textarea>
-        <label>Quelle est l'importance de l'innovation et du numérique dans la modernisation des services municipaux ?</label>
+        <label>Quelle est l'importance de la concertation avec les citoyens et les acteurs locaux dans votre travail ?</label>
         <textarea name="q8"></textarea>
-        <label>Quels sont les projets majeurs que vous avez pilotés et leurs avantages dans votre parcours ? Ou quels projets vous tiennent particulièrement à cœur ?</label>
+        <label>Quels sont les projets municipaux que vous avez pilotés et qui vous tiennent particulièrement à cœur ?</label>
         <textarea name="q9"></textarea>
 
         <h2>Questions de Sacha</h2>
-        <label>Vous travaillez en étroite collaboration avec des élus, tout en étant garante de la neutralité administrative. Avez-vous déjà été confrontée à des dilemmes éthiques dans l’exercice de vos fonctions ? Comment les avez-vous gérés ?</label>
+        <label>Vous êtes en lien direct avec les élus et les citoyens. Avez-vous déjà été confronté à des dilemmes éthiques dans votre fonction ? Comment les avez-vous gérés ?</label>
         <textarea name="q10"></textarea>
-        <label>Le droit administratif repose souvent sur des décisions du Conseil d’État. Y a-t-il un arrêt ou une règle juridique qui a particulièrement marqué votre gestion de la collectivité ?</label>
+        <label>La politique locale implique souvent des décisions difficiles et des arbitrages. Comment faites-vous pour concilier les intérêts des habitants et les contraintes budgétaires ?</label>
         <textarea name="q11"></textarea>
-        <label>En tant qu’étudiant en AES, je m’intéresse à la gestion et au pilotage des organisations. Pensez-vous que des compétences acquises dans le secteur privé (comme la gestion d’une PME) peuvent être utiles pour un poste de DGS ?</label>
+        <label>En tant qu’étudiant en AES, je m’intéresse à la gestion publique et à l’action locale. Pensez-vous que des compétences en gestion privée (comme la gestion d’une PME) peuvent être utiles pour un poste d’élu municipal ?</label>
         <textarea name="q12"></textarea>
     </form>
     
@@ -59,7 +59,7 @@
             let y = 10;
             let maxWidth = 180;
             doc.setFontSize(10);
-            doc.text("Formulaire d'enquête destiné à Flore Thalouarn, directrice générale des services de la ville de Saint Brieuc", 10, y);
+            doc.text("Questionnaire destiné à Thibault Le Hingrat, maire adjoint de Saint-Brieuc", 10, y);
             y += 10;
             
             document.querySelectorAll("label, textarea").forEach(element => {
@@ -76,7 +76,7 @@
                 }
             });
             
-            doc.save("Formulaire_DGS_Flore_Thalouarn.pdf");
+            doc.save("Questionnaire_Thibault_Le_Hingrat.pdf");
         }
     </script>
 </body>
